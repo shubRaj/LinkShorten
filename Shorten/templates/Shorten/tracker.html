@@ -1,0 +1,32 @@
+{% extends 'Shorten/base.html' %}{% block title %}Tracker{% endblock title %}{% block content %}
+<h1 class="display-1 text-center primary">Tracker Logs</h1>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">S.N</th>
+            <th scope="col">IP ADDRESS</th>
+            <th scope="col">USER AGENT</th>
+            <th scope="col">DEVICE</th>
+            <th scope="col">LOGGED ON</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">NA</th>
+            <td>{{ip}}</td>
+            <td>{{request.META.HTTP_USER_AGENT}}</td>
+            <td>{{device}}</td>
+            <td>YOU</td>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{log.ip}}</td>
+            <td>{{log.browser}}</td>
+            <td>{{log.device}}</td>
+            <td>{{log.logged_on}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
