@@ -12,7 +12,7 @@ from .models import Tracker,Shorten,Log
 def find_ip(request):
     x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
     if x_forwarded_for:
-        ip = "".join(x_forwarded_for.split(','))
+        ip = x_forwarded_for
     else:
         ip = request.META.get("REMOTE_ADDR")
     return ip
