@@ -2,3 +2,7 @@ __pycache__
 db.sqlite3
 .gitignore
 test.py
+/.build
+
+**/*.pyc
+*-env/
