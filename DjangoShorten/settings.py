@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
-USE_X_FORWARDED_HOST = True
+# USE_X_FORWARDED_HOST = True
 
 # Application definition
 
